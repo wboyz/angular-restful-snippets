@@ -1,6 +1,6 @@
 {
   "name": "angular-restful-snippets",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Angular restful snippets for Atom text editor.",
   "repository": {
     "type": "git",
@@ -15,6 +15,9 @@
   ],
   "author": "wboyz",
   "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
   "bugs": {
     "url": "https://github.com/wboyz/angular-restful-snippets/issues"
   },
