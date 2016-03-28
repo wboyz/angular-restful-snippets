@@ -3,18 +3,28 @@
     'factory function':
         'prefix': 'ngfactoryfunction'
         'body': """
-                  function ${1:"funcationName"}() {
-                      return $http.${2:get}('${3:"url"}')
-                          .then(${1:"funcationName"}Complete)
-                          .catch(${1:"funcationName"}Failed);
+                  function ${1:funcationName}() {
+                      return $http.${2:get}('${3:url}')
+                          .then(${1:funcationName}Complete)
+                          .catch(${1:funcationName}Failed);
 
-                      function ${1:"funcationName"}Complete(response) {
+                      function ${1:funcationName}Complete(response) {
                           return response.${4:data};
                       }
 
-                      function ${1:"funcationName"}Failed(error) {
-                          console.log('XHR Failed for ${1:"funcationName"}.' + error.data);
+                      function ${1:funcationName}Failed(error) {
+                          console.log('XHR Failed for ${1:funcationName}.' + error.data);
                       }
                   }
                   ${5}
+                """
+    'controller function':
+        'prefix': 'ngcontrollerfunction'
+        'body': """
+                  function ${1:funcationName}() {
+                      return ${2:serviceName}.${1:funcationName}(${3:params})
+                          .then(function(${4:data}) {
+                              ${5}
+                          });
+                  }
                 """
