@@ -8,7 +8,7 @@ Atom Package: https://atom.io/packages/angular-restful-snippets
 apm install angular-restful-snippets
 ```
 
-Or Settings/Preferences ➔ Packages ➔ Search for `angular-restful-snippets`
+Or Settings/Preferences ➔ Install ➔ Search for `angular-restful-snippets`
 
 ## Currently Available Snippets
 * **ngrestfulfactory**: factory with getModels, getModel, storeModel, updateModel methods
