@@ -1,6 +1,15 @@
 # angular-restful-snippets
 RESTful AngularJS 1 snippets for Atom based on [johnpapa/angular-styleguide](https://github.com/johnpapa/angular-styleguide).
 
+## Install
+Atom Package: https://atom.io/packages/angular-restful-snippets
+
+```bash
+apm install angular-restful-snippets
+```
+
+Or Settings/Preferences ➔ Packages ➔ Search for `angular-restful-snippets`
+
 ## Currently Available Snippets
 * **ngrestfulfactory**: factory with getModels, getModel, storeModel, updateModel methods
 * **ngfactoryfunction**: RESTful factory method block with complete and failed callback functions
