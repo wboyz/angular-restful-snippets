@@ -28,3 +28,85 @@
                           });
                   }
                 """
+    'controller function':
+        'prefix': 'ngrestfulfactory'
+        'body': """
+                  (function() {
+                      'use strict';
+
+                      angular
+                          .module('${1:module}')
+                          .factory('${2:factory}', ${2:factory});
+
+                      ${2:factory}.$inject = ['${3:dependencies}'];
+
+                      /* @ngInject */
+                      function ${2:factory}(${3:dependencies}) {
+                          var service = {
+                              get${4:modelNamePlural}: get${4:modelNamePlural},
+                              get${5:modelName}:get${5:modelName},
+                              store${5:modelName}: store${5:modelName},
+                              update${5:modelName}: update${5:modelName},
+                          };
+
+                          return service;
+
+                          function get${4:modelNamePlural}() {
+                              return $http.get('/${6:apiUrl}')
+                                  .then(get${4:modelNamePlural}Complete)
+                                  .catch(get${4:modelNamePlural}Failed);
+
+                              function get${4:modelNamePlural}Complete(response) {
+                                  return response.data;
+                              }
+
+                              function get${4:modelNamePlural}Failed(error) {
+                                  console.log('XHR Failed for get${4:modelNamePlural}. ' + error.data);
+                              }
+                          }
+
+                          function store${5:modelName}(formData) {
+                              return $http.post('/${6:apiUrl}', formData)
+                                  .then(store${5:modelName}Complete)
+                                  .catch(store${5:modelName}Failed);
+
+                              function store${5:modelName}Complete(response) {
+                                  return response.data;
+                              }
+
+                              function store${5:modelName}Failed(error) {
+                                  console.log('XHR Failed for store${5:modelName}. ' + error.data);
+                              }
+                          }
+
+                          function get${5:modelName}(id) {
+                              return $http.get('/${6:apiUrl}/' + id)
+                                  .then(get${5:modelName}Complete)
+                                  .catch(get${5:modelName}Failed);
+
+                              function get${5:modelName}Complete(response) {
+                                  return response.data;
+                              }
+
+                              function get${5:modelName}Failed(error) {
+                                  console.log('XHR Failed for get${5:modelName}. ' + error.data);
+                              }
+                          }
+
+                          function update${5:modelName}(formData, id) {
+                              return $http.patch('/${6:apiUrl}/' + id, formData)
+                                  .then(update${5:modelName}Complete)
+                                  .catch(update${5:modelName}Failed);
+
+                              function update${5:modelName}Complete(response) {
+                                  return response.data;
+                              }
+
+                              function update${5:modelName}Failed(error) {
+                                  console.log('XHR Failed for update${5:modelName}. ' + error.data);
+                              }
+                          }
+
+                      }
+                  })();
+                """
