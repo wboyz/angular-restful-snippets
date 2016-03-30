@@ -28,7 +28,7 @@
                           });
                   }
                 """
-    'controller function':
+    'restful angular factory':
         'prefix': 'ngrestfulfactory'
         'body': """
                   (function() {
