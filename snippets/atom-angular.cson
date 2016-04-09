@@ -107,6 +107,19 @@
                               }
                           }
 
+                          function delete${5:modelName}(id) {
+                              return $http.delete('/${6:apiUrl}/' + id)
+                                  .then(delete${5:modelName}Complete)
+                                  .catch(delete${5:modelName}Failed);
+
+                              function delete${5:modelName}Complete(response) {
+                                  return response.data;
+                              }
+
+                              function delete${5:modelName}Failed(error) {
+                                  console.log('XHR Failed for delete${5:modelName}.' + error.data);
+                              }
+                          }
                       }
                   })();
                 """
