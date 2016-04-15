@@ -51,7 +51,12 @@
 
                           return service;
 
-                          function get${4:modelNamePlural}() {
+                          function get${4:modelNamePlural}(data) {
+                            if(data)
+                              return $http.get('/${6:apiUrl}?${7:search}=data')
+                                  .then(get${4:modelNamePlural}Complete)
+                                  .catch(get${4:modelNamePlural}Failed);
+                            else
                               return $http.get('/${6:apiUrl}')
                                   .then(get${4:modelNamePlural}Complete)
                                   .catch(get${4:modelNamePlural}Failed);

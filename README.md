@@ -11,7 +11,7 @@ apm install angular-restful-snippets
 Or Settings/Preferences ➔ Install ➔ Search for `angular-restful-snippets`. You should restart Atom after the Install / Update of the package.
 
 ## Currently Available Snippets
-* **ngrestfulfactory**: factory with getModels, getModel, storeModel, updateModel methods
+* **ngrestfulfactory**: factory with getModels, getModel, storeModel, updateModel methods and deleteModel.
 * **ngfactoryfunction**: RESTful factory method block with complete and failed callback functions
 * **ngcontrollerfunction**: RESTful controller method block with factory call, complete and failed callback functions
 
